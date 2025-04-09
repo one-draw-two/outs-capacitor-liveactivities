@@ -14,6 +14,7 @@ npx cap sync
 <docgen-index>
 
 * [`echo(...)`](#echo)
+* [`startLiveActivity(...)`](#startliveactivity)
 
 </docgen-index>
 
@@ -31,6 +32,21 @@ echo(options: { value: string; }) => Promise<{ value: string; }>
 | **`options`** | <code>{ value: string; }</code> |
 
 **Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+
+--------------------
+
+
+### startLiveActivity(...)
+
+```typescript
+startLiveActivity(options: { activityId: string; data: any; }) => Promise<{ started: boolean; }>
+```
+
+| Param         | Type                                            |
+| ------------- | ----------------------------------------------- |
+| **`options`** | <code>{ activityId: string; data: any; }</code> |
+
+**Returns:** <code>Promise&lt;{ started: boolean; }&gt;</code>
 
 --------------------
 
