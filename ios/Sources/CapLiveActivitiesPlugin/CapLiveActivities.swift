@@ -1,6 +1,8 @@
 import Foundation
 
 @objc public class CapLiveActivities: NSObject {
+    public static var liveActivityDelegate: LiveActivityDelegate?
+    
     @objc public func echo(_ value: String) -> String {
         print(value)
         return value
@@ -8,10 +10,13 @@ import Foundation
 
     public func startLiveActivity(activityId: String, data: [String: Any]) throws -> Bool {
         if #available(iOS 16.1, *) {
-            // Your Live Activity implementation here
-            // This is a basic example - you'll need to adapt it to your specific Activity type
-            // and data structure
             print("Happily here bro")
+            print(CapLiveActivities.liveActivityDelegate)
+            
+            // Use the delegate to call the methods
+            CapLiveActivities.liveActivityDelegate?.monitorPushToStartToken()
+            CapLiveActivities.liveActivityDelegate?.monitorNewActivities()
+
             return true
         } else {
             throw NSError(domain: "com.capacitor.liveactivities",

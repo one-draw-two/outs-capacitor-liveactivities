@@ -18,6 +18,9 @@ class LiveActivityManager {
     private static func formatPushToken(_ token: Data) -> String { return token.reduce("") { $0 + String(format: "%02x", $1) } }
         
     func monitorPushToStartToken() {
+        
+        print("Entered here too")
+        
         Task {
             for await token in Activity<OutsWednesdayLiveActivityAttributes>.pushToStartTokenUpdates {
                 Logger.liveActivity.log("🔔 New push token received (without manual start): \(Self.formatPushToken(token))")

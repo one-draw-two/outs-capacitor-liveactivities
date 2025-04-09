@@ -1,8 +1,9 @@
 import UIKit
 import Capacitor
+import OutsCapacitorLiveactivities
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, LiveActivityDelegate {
 
     var window: UIWindow?
 
@@ -10,9 +11,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         
+        CapLiveActivities.liveActivityDelegate = self
         print("AppDelegate: didFinishLaunchingWithOptions")
         
         return true
+    }
+
+    func monitorPushToStartToken() {
+        print("Selamla burdayım")
+        LiveActivityManager.shared.monitorPushToStartToken()
+    }
+    
+    func monitorNewActivities() {
+        LiveActivityManager.shared.monitorNewActivities()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

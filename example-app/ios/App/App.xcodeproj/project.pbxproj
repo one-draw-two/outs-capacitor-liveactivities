@@ -3,20 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0A8260882DA690F400D4A55B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8260872DA690F300D4A55B /* WidgetKit.framework */; };
 		0A82608A2DA690F400D4A55B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8260892DA690F400D4A55B /* SwiftUI.framework */; };
 		0A8260972DA690F400D4A55B /* widgetslaExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0A8260862DA690F300D4A55B /* widgetslaExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0A8260A32DA690FC00D4A55B /* widgetsla.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A82609F2DA690FC00D4A55B /* widgetsla.swift */; };
-		0A8260A42DA690FC00D4A55B /* widgetslaBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8260A02DA690FC00D4A55B /* widgetslaBundle.swift */; };
-		0A8260A52DA690FC00D4A55B /* widgetslaLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8260A12DA690FC00D4A55B /* widgetslaLiveActivity.swift */; };
-		0A8260A62DA690FC00D4A55B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A82609D2DA690FC00D4A55B /* Assets.xcassets */; };
-		0A8260AC2DA6912500D4A55B /* LiveActivityConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8260AA2DA6912500D4A55B /* LiveActivityConfiguration.swift */; };
-		0A8260AD2DA6912500D4A55B /* LiveActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8260A92DA6912500D4A55B /* LiveActivityAttributes.swift */; };
-		0A8260AE2DA6912500D4A55B /* LiveActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8260A82DA6912500D4A55B /* LiveActivityManager.swift */; };
 		2FAD9763203C412B000D30F8 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD9762203C412B000D30F8 /* config.xml */; };
 		50379B232058CBB4000EE86E /* capacitor.config.json in Resources */ = {isa = PBXBuildFile; fileRef = 50379B222058CBB4000EE86E /* capacitor.config.json */; };
 		504EC3081FED79650016851F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504EC3071FED79650016851F /* AppDelegate.swift */; };
@@ -55,15 +48,8 @@
 		0A8260862DA690F300D4A55B /* widgetslaExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetslaExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A8260872DA690F300D4A55B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		0A8260892DA690F400D4A55B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		0A82609D2DA690FC00D4A55B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0A82609E2DA690FC00D4A55B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A82609F2DA690FC00D4A55B /* widgetsla.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = widgetsla.swift; sourceTree = "<group>"; };
-		0A8260A02DA690FC00D4A55B /* widgetslaBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = widgetslaBundle.swift; sourceTree = "<group>"; };
-		0A8260A12DA690FC00D4A55B /* widgetslaLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = widgetslaLiveActivity.swift; sourceTree = "<group>"; };
-		0A8260A82DA6912500D4A55B /* LiveActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityManager.swift; sourceTree = "<group>"; };
-		0A8260A92DA6912500D4A55B /* LiveActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityAttributes.swift; sourceTree = "<group>"; };
-		0A8260AA2DA6912500D4A55B /* LiveActivityConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityConfiguration.swift; sourceTree = "<group>"; };
 		0A8260AF2DA6917700D4A55B /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
+		0A8260B32DA6997600D4A55B /* widgetslaExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = widgetslaExtension.entitlements; sourceTree = "<group>"; };
 		2FAD9762203C412B000D30F8 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = config.xml; sourceTree = "<group>"; };
 		50379B222058CBB4000EE86E /* capacitor.config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = capacitor.config.json; sourceTree = "<group>"; };
 		504EC3041FED79650016851F /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +63,29 @@
 		AF51FD2D460BCFE21FA515B2 /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
 		FC68EB0AF532CFC21C3344DD /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0A82616E2DA69E5900D4A55B /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				LiveActivities/LiveActivityAttributes.swift,
+				LiveActivities/LiveActivityConfiguration.swift,
+				LiveActivities/LiveActivityManager.swift,
+			);
+			target = 504EC3031FED79650016851F /* App */;
+		};
+		0A82616F2DA69E5900D4A55B /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0A8260852DA690F300D4A55B /* widgetslaExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0A8261622DA69E5900D4A55B /* widgetsla */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (0A82616E2DA69E5900D4A55B /* PBXFileSystemSynchronizedBuildFileExceptionSet */, 0A82616F2DA69E5900D4A55B /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = widgetsla; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0A8260832DA690F300D4A55B /* Frameworks */ = {
@@ -99,29 +108,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0A8260A22DA690FC00D4A55B /* widgetsla */ = {
-			isa = PBXGroup;
-			children = (
-				0A8260AB2DA6912500D4A55B /* LiveActivities */,
-				0A82609D2DA690FC00D4A55B /* Assets.xcassets */,
-				0A82609E2DA690FC00D4A55B /* Info.plist */,
-				0A82609F2DA690FC00D4A55B /* widgetsla.swift */,
-				0A8260A02DA690FC00D4A55B /* widgetslaBundle.swift */,
-				0A8260A12DA690FC00D4A55B /* widgetslaLiveActivity.swift */,
-			);
-			path = widgetsla;
-			sourceTree = "<group>";
-		};
-		0A8260AB2DA6912500D4A55B /* LiveActivities */ = {
-			isa = PBXGroup;
-			children = (
-				0A8260A82DA6912500D4A55B /* LiveActivityManager.swift */,
-				0A8260A92DA6912500D4A55B /* LiveActivityAttributes.swift */,
-				0A8260AA2DA6912500D4A55B /* LiveActivityConfiguration.swift */,
-			);
-			path = LiveActivities;
-			sourceTree = "<group>";
-		};
 		27E2DDA53C4D2A4D1A88CE4A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,8 +121,9 @@
 		504EC2FB1FED79650016851F = {
 			isa = PBXGroup;
 			children = (
+				0A8260B32DA6997600D4A55B /* widgetslaExtension.entitlements */,
 				504EC3061FED79650016851F /* App */,
-				0A8260A22DA690FC00D4A55B /* widgetsla */,
+				0A8261622DA69E5900D4A55B /* widgetsla */,
 				504EC3051FED79650016851F /* Products */,
 				7F8756D8B27F46E3366F6CEA /* Pods */,
 				27E2DDA53C4D2A4D1A88CE4A /* Frameworks */,
@@ -191,6 +178,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0A8261622DA69E5900D4A55B /* widgetsla */,
 			);
 			name = widgetslaExtension;
 			packageProductDependencies = (
@@ -266,7 +256,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A8260A62DA690FC00D4A55B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,12 +315,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A8260A32DA690FC00D4A55B /* widgetsla.swift in Sources */,
-				0A8260A42DA690FC00D4A55B /* widgetslaBundle.swift in Sources */,
-				0A8260AC2DA6912500D4A55B /* LiveActivityConfiguration.swift in Sources */,
-				0A8260AD2DA6912500D4A55B /* LiveActivityAttributes.swift in Sources */,
-				0A8260AE2DA6912500D4A55B /* LiveActivityManager.swift in Sources */,
-				0A8260A52DA690FC00D4A55B /* widgetslaLiveActivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +367,7 @@
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = widgetslaExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4F3CK8D4FL;
@@ -394,7 +378,11 @@
 				INFOPLIST_KEY_CFBundleDisplayName = widgetsla;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -420,6 +408,7 @@
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_ENTITLEMENTS = widgetslaExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4F3CK8D4FL;
@@ -430,7 +419,11 @@
 				INFOPLIST_KEY_CFBundleDisplayName = widgetsla;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
@@ -545,7 +538,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -561,7 +555,10 @@
 				DEVELOPMENT_TEAM = 4F3CK8D4FL;
 				INFOPLIST_FILE = App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = outs.tand.ing.test;
@@ -583,7 +580,10 @@
 				DEVELOPMENT_TEAM = 4F3CK8D4FL;
 				INFOPLIST_FILE = App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = outs.tand.ing.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
