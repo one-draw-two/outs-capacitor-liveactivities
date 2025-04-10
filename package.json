@@ -1,7 +1,7 @@
 {
   "name": "outs-capacitor-liveactivities",
-  "version": "0.0.3",
-  "description": "Very cool plugin",
+  "version": "0.0.4",
+  "description": "Capacitor plugin to monitor live activity tokens on iOS (start and update) and pass to JS",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",

@@ -17,7 +17,6 @@ public class CapLiveActivitiesPlugin: CAPPlugin, CAPBridgedPlugin {
 
     override public func load() {
         super.load()
-
         for notificationName in [ "StartTokenReceived", "UpdateTokenReceived" ] {
             NotificationCenter.default.addObserver( self, selector: #selector(handleTokenReceived(_:)), name: Notification.Name(notificationName), object: nil )
         }
@@ -25,6 +24,11 @@ public class CapLiveActivitiesPlugin: CAPPlugin, CAPBridgedPlugin {
 
     deinit {
         NotificationCenter.default.removeObserver(self)
+    }
+
+    @objc func echo(_ call: CAPPluginCall) {
+        let value = call.getString("value") ?? ""
+        call.resolve([ "value": implementation.echo(value) ])
     }
 
     @objc private func handleTokenReceived(_ notification: Notification) {
@@ -36,29 +40,9 @@ public class CapLiveActivitiesPlugin: CAPPlugin, CAPBridgedPlugin {
         self.notifyListeners(notification.name.rawValue, data: ["token": token])
     }
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
-    }
-
     @objc func startLiveActivity(_ call: CAPPluginCall) {
-        guard let activityId = call.getString("activityId") else {
-            call.reject("Activity ID is required")
-            return
-        }
-        
-        guard let data = call.getObject("data") else {
-            call.reject("Activity data is required")
-            return
-        }
-        
-        do {
-            let started = try implementation.startLiveActivity(activityId: activityId, data: data)
-            call.resolve(["started": started])
-        } catch {
-            call.reject("Failed to start Live Activity: \(error.localizedDescription)")
-        }
+        let testString = call.getString("testString")
+        let started = implementation.startLiveActivity(testString: testString)
+        call.resolve(["started": started])
     }
 }

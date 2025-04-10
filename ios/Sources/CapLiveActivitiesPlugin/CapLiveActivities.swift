@@ -8,17 +8,17 @@ import Foundation
         return value
     }
 
-    public func startLiveActivity(activityId: String, data: [String: Any]) throws -> Bool {
+    public func startLiveActivity(testString: String? = nil) -> Bool {
         if #available(iOS 16.1, *) {
-
+            if let test = testString {
+                print("Test string received:", test)
+            }
             CapLiveActivities.liveActivityDelegate?.monitorPushToStartToken()
             CapLiveActivities.liveActivityDelegate?.monitorNewActivities()
-
             return true
         } else {
-            throw NSError(domain: "com.capacitor.liveactivities",
-                         code: -1,
-                         userInfo: [NSLocalizedDescriptionKey: "Live Activities require iOS 16.1 or later"])
+            print("Live Activities require iOS 16.1 or later")
+            return false
         }
     }
 }
