@@ -10,10 +10,7 @@ import Foundation
 
     public func startLiveActivity(activityId: String, data: [String: Any]) throws -> Bool {
         if #available(iOS 16.1, *) {
-            print("Happily here bro")
-            print(CapLiveActivities.liveActivityDelegate)
-            
-            // Use the delegate to call the methods
+
             CapLiveActivities.liveActivityDelegate?.monitorPushToStartToken()
             CapLiveActivities.liveActivityDelegate?.monitorNewActivities()
 
