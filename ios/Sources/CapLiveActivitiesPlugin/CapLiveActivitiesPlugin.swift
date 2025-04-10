@@ -15,6 +15,35 @@ public class CapLiveActivitiesPlugin: CAPPlugin, CAPBridgedPlugin {
     ]
     private let implementation = CapLiveActivities()
 
+    override public func load() {
+        super.load()
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(handlePushTokenReceived(_:)),
+            name: Notification.Name("PushTokenReceived"),
+            object: nil
+        )
+    }
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+
+    @objc private func handlePushTokenReceived(_ notification: Notification) {
+        
+        print("Received push token notification ******")
+        
+        guard let userInfo = notification.userInfo,
+              let token = userInfo["token"] as? String else {
+            return
+        }
+
+        print(token)
+        
+        // Notify JavaScript listeners
+        self.notifyListeners("pushTokenReceived", data: ["token": token])
+    }
+
     @objc func echo(_ call: CAPPluginCall) {
         let value = call.getString("value") ?? ""
         call.resolve([

@@ -21,9 +21,17 @@ class LiveActivityManager {
         
         print("Entered here too")
         
+
+        
         Task {
             for await token in Activity<OutsWednesdayLiveActivityAttributes>.pushToStartTokenUpdates {
                 Logger.liveActivity.log("🔔 New push token received (without manual start): \(Self.formatPushToken(token))")
+                
+                NotificationCenter.default.post(
+                    name: Notification.Name("PushTokenReceived"),
+                    object: nil,
+                    userInfo: ["token": "CANAVAR"]
+                )
             }
         }
     }

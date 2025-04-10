@@ -21,4 +21,8 @@ window.startLiveActivity = async () => {
     } catch (error) {
         console.error('Failed to start Live Activity:', error);
     }
+
+    CapLiveActivities.addListener('pushTokenReceived', (data) => {
+        console.log('JSSSS Push token received:', data.token)
+      })
 }
