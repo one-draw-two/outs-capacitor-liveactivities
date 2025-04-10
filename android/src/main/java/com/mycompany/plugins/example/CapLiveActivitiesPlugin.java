@@ -19,4 +19,15 @@ public class CapLiveActivitiesPlugin extends Plugin {
         ret.put("value", implementation.echo(value));
         call.resolve(ret);
     }
+
+    @PluginMethod
+    public void startLiveActivity(PluginCall call) {
+        String testString = call.getString("testString");
+        
+        boolean result = implementation.startLiveActivity(testString);
+        
+        JSObject ret = new JSObject();
+        ret.put("started", result);
+        call.resolve(ret);
+    }
 }

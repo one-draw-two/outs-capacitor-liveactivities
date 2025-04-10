@@ -39,12 +39,12 @@ echo(options: { value: string; }) => Promise<{ value: string; }>
 ### startLiveActivity(...)
 
 ```typescript
-startLiveActivity(options: { activityId: string; data: any; }) => Promise<{ started: boolean; }>
+startLiveActivity(options?: { testString?: string | undefined; } | undefined) => Promise<{ started: boolean; }>
 ```
 
-| Param         | Type                                            |
-| ------------- | ----------------------------------------------- |
-| **`options`** | <code>{ activityId: string; data: any; }</code> |
+| Param         | Type                                  |
+| ------------- | ------------------------------------- |
+| **`options`** | <code>{ testString?: string; }</code> |
 
 **Returns:** <code>Promise&lt;{ started: boolean; }&gt;</code>
 

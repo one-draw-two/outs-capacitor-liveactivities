@@ -8,4 +8,12 @@ public class CapLiveActivities {
         Log.i("Echo", value);
         return value;
     }
+
+    public boolean startLiveActivity(String testString) {
+        Log.w("CapLiveActivities", "Live Activities are not supported on Android");
+        if (testString != null) {
+            Log.i("CapLiveActivities", "Test string: " + testString);
+        }
+        return false;
+    }
 }
