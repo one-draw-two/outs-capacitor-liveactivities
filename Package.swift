@@ -2,11 +2,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "OutsCapacitorLiveactivities",
+    name: "Outs1x2CapacitorLiveactivities",
     platforms: [.iOS(.v14)],
     products: [
         .library(
-            name: "OutsCapacitorLiveactivities",
+            name: "Outs1x2CapacitorLiveactivities",
             targets: ["CapLiveActivitiesPlugin"])
     ],
     dependencies: [
