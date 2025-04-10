@@ -1,6 +1,6 @@
 {
-  "name": "outs-capacitor-liveactivities",
-  "version": "0.0.5",
+  "name": "@outs1x2/capacitor-liveactivities",
+  "version": "0.1.0",
   "description": "Capacitor plugin to monitor live activity tokens on iOS (start and update) and pass to JS",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -19,15 +19,15 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/one-draw-two/capacitor-liveactivities.git"
+    "url": "git+https://github.com/one-draw-two/outs-capacitor-liveactivities.git"
   },
   "bugs": {
-    "url": "https://github.com/one-draw-two/capacitor-liveactivities/issues"
+    "url": "https://github.com/one-draw-two/outs-capacitor-liveactivities/issues"
   },
   "keywords": [
     "capacitor",
     "plugin",
-    "native"
+    "live activities"
   ],
   "scripts": {
     "verify": "npm run verify:ios && npm run verify:android && npm run verify:web",
