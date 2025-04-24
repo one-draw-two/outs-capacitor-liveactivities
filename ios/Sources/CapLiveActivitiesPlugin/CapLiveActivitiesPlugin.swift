@@ -38,23 +38,20 @@ public class CapLiveActivitiesPlugin: CAPPlugin, CAPBridgedPlugin {
             return
         }
 
-        // Create a mutable dictionary to pass all userInfo to JavaScript
-        var eventData: [String: Any] = ["token": token]
+        // Create a dictionary to pass all userInfo to JavaScript
+        var eventData: [String: Any] = [:]
 
-        // Add any other fields from userInfo that might be present
-        if let activityType = userInfo["activityType"] as? String {
-            eventData["activityType"] = activityType
+        // Copy all values from userInfo to eventData
+        for (key, value) in userInfo {
+            if let key = key as? String {
+                // Handle Date objects specially by converting to milliseconds timestamp
+                if let dateValue = value as? Date {
+                    eventData[key] = Int(dateValue.timeIntervalSince1970 * 1000)
+                } else {
+                    eventData[key] = value
+                }
+            }
         }
-
-        if let instanceId = userInfo["instanceId"] as? String {
-            eventData["instanceId"] = instanceId
-        }
-
-        if let timestamp = userInfo["timestamp"] as? Date {
-            eventData["timestamp"] = Int(timestamp.timeIntervalSince1970 * 1000)
-        }
-
-        // Add any other fields that might be relevant
 
         self.notifyListeners(notification.name.rawValue, data: eventData)
     }
