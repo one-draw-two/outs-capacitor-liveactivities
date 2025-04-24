@@ -10,6 +10,8 @@ public class CapLiveActivitiesPlugin: CAPPlugin, CAPBridgedPlugin {
     public let pluginMethods: [CAPPluginMethod] = [
         CAPPluginMethod(name: "echo", returnType: CAPPluginReturnPromise),
         CAPPluginMethod(name: "startLiveActivity", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "getLogs", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "clearLogs", returnType: CAPPluginReturnPromise),
     ]
     private let implementation = CapLiveActivities()
 
@@ -60,5 +62,15 @@ public class CapLiveActivitiesPlugin: CAPPlugin, CAPBridgedPlugin {
         let testString = call.getString("testString")
         let started = implementation.startLiveActivity(testString: testString)
         call.resolve(["started": started])
+    }
+
+    @objc func getLogs(_ call: CAPPluginCall) {
+        let logs = Logger.shared.getLogContents()
+        call.resolve(["logs": logs])
+    }
+
+    @objc func clearLogs(_ call: CAPPluginCall) {
+        Logger.shared.clearLogs()
+        call.resolve()
     }
 }
