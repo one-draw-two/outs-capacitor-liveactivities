@@ -15,8 +15,6 @@ npx cap sync
 
 * [`echo(...)`](#echo)
 * [`startLiveActivity(...)`](#startliveactivity)
-* [`getLogs()`](#getlogs)
-* [`clearLogs()`](#clearlogs)
 
 </docgen-index>
 
@@ -49,28 +47,6 @@ startLiveActivity(options?: { testString?: string | undefined; } | undefined) =>
 | **`options`** | <code>{ testString?: string; }</code> |
 
 **Returns:** <code>Promise&lt;{ started: boolean; }&gt;</code>
-
---------------------
-
-
-### getLogs()
-
-```typescript
-getLogs() => Promise<{ logs: string; }>
-```
-
-**Returns:** <code>Promise&lt;{ logs: string; }&gt;</code>
-
---------------------
-
-
-### clearLogs()
-
-```typescript
-clearLogs() => Promise<{ cleared: boolean; }>
-```
-
-**Returns:** <code>Promise&lt;{ cleared: boolean; }&gt;</code>
 
 --------------------
 

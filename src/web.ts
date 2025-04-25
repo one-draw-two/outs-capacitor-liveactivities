@@ -13,14 +13,4 @@ export class CapLiveActivitiesWeb extends WebPlugin implements CapLiveActivities
     if (options?.testString) console.log('Test string:', options.testString);
     return { started: false };
   }
-
-  async getLogs(): Promise<{ logs: string }> {
-    console.warn('Logs are not available in web environment');
-    return { logs: 'Logs are only available on native devices' };
-  }
-
-  async clearLogs(): Promise<{ cleared: boolean }> {
-    console.warn('Logs are not available in web environment');
-    return { cleared: false };
-  }
 }
